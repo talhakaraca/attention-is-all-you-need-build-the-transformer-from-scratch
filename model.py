@@ -18,8 +18,8 @@ def build_token_to_id_vocab(sentences, specials=('<pad>', '<bos>', '<eos>', '<un
         token_vocab[i] = x
         x +=1
 
-    for row in sentences:
-        for element in row.split():
+    for s in sentences:
+        for element in s.split():
             if element in token_vocab.keys():
                 continue
             token_vocab[element] = x

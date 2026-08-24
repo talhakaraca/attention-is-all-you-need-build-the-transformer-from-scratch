@@ -38,10 +38,7 @@ def build_id_to_token_vocab(token_to_id):
     # TODO: build the inverse id-to-token dictionary from token_to_id
     id_to_token = {}
 
-    for k,v in token_to_id.items():
-        id_to_token[v] = k
-    
-    return id_to_token
+    return {v: k for k,v in token_to_id.items()}
 
 # Step 3 - encode_sentence_to_ids (not yet solved)
 # TODO: implement
